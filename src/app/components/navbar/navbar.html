@@ -1,0 +1,18 @@
+<nav class="fixed top-0 inset-x-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200">
+  <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+    <a href="#home" class="font-semibold tracking-tight text-slate-900" aria-label="Accueil — LAYE Kodjo Benoît Joseph">LK<span class="text-blue-700">.</span></a>
+    <button class="md:hidden rounded-md border border-slate-300 px-3 py-2 text-sm" (click)="menuOpen.update(v => !v)" [attr.aria-expanded]="menuOpen()" aria-controls="mobile-nav">{{ menuOpen() ? 'Fermer' : 'Menu' }}</button>
+    <ul class="hidden md:flex items-center gap-7">
+      @for (link of navLinks; track link.href) { <li><a [href]="link.href" class="text-sm text-slate-600 hover:text-blue-800">{{ link.label }}</a></li> }
+      <li><a href="assets/cv-kodjo-benoit-joseph-laye.pdf" download="CV-LAYE-Kodjo-Benoit-Joseph.pdf" class="text-sm text-slate-600 hover:text-blue-800">CV ↓</a></li><li><a href="#contact" class="text-sm font-medium text-blue-800">Me contacter</a></li>
+    </ul>
+  </div>
+  @if (menuOpen()) {
+    <ul id="mobile-nav" class="md:hidden bg-white border-t border-slate-200 px-6 py-3">
+      @for (link of navLinks; track link.href) { <li><a [href]="link.href" (click)="menuOpen.set(false)" class="block py-3 text-slate-700">{{ link.label }}</a></li> }
+      <li><a href="assets/cv-kodjo-benoit-joseph-laye.pdf" download="CV-LAYE-Kodjo-Benoit-Joseph.pdf" class="block py-3 text-blue-800">Télécharger le CV ↓</a></li><li><a href="#contact" (click)="menuOpen.set(false)" class="block py-3 text-blue-800 font-medium">Me contacter</a></li>
+    </ul>
+  }
+</nav>
+
+

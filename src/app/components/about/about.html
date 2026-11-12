@@ -1,0 +1,18 @@
+<section id="about" class="py-20 md:py-28 bg-[#f1f5f8] reveal">
+ <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-[1.1fr_.9fr] gap-12 md:gap-20">
+  <div><p class="text-blue-700 text-sm font-semibold uppercase tracking-widest mb-4">À propos</p><h2 class="text-3xl md:text-4xl font-semibold tracking-tight text-slate-900">Des outils utiles, pensés pour les personnes qui les utilisent.</h2>
+   <div class="mt-7 space-y-4 text-slate-600 leading-relaxed">
+    <p>Informaticien et développeur d’applications basé à Lomé, je travaille sur des applications web, des outils métier et l’automatisation de tâches.</p>
+    <p>Mon parcours associe développement logiciel, administration de centre d’examen et accompagnement des utilisateurs. J’interviens également comme formateur en initiation à l’informatique et en bureautique.</p>
+    <p>J’ai conçu plus de cinq solutions Excel VBA pour répondre à des besoins concrets de gestion et réduire les tâches répétitives.</p>
+   </div><a href="mailto:kdjolaye@gmail.com" class="inline-flex mt-7 text-blue-800 font-medium hover:underline">kdjolaye&#64;gmail.com →</a>
+  </div>
+  <aside class="bg-white border border-slate-200 rounded-xl p-6 md:p-8">
+   <h3 class="text-lg font-semibold text-slate-900">En bref</h3>
+   <dl class="mt-5 divide-y divide-slate-200">
+    @for (info of infos; track info.label) { <div class="py-4 grid grid-cols-[120px_1fr] gap-3"><dt class="text-sm text-slate-500">{{ info.label }}</dt><dd class="text-sm text-slate-800 font-medium">{{ info.value }}</dd></div> }
+   </dl>
+  </aside>
+ </div>
+</section>
+
